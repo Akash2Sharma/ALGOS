@@ -64,50 +64,47 @@ void minHeapify(struct MinHeap* minHeap, int idx)
 }
 // A utility function to check if size of heap is 1 or not
 int isSizeOne(struct MinHeap* minHeap)
-{
-return (minHeap->size == 1);
-}
+    {   return (minHeap->size == 1);
+    }
 // A standard function to extract minimum value node from heap
 struct MinHeapNode* extractMin(struct MinHeap* minHeap)
 {
-struct MinHeapNode* temp = minHeap->array[0];
-minHeap->array[0] = minHeap->array[minHeap->size - 1];
---minHeap->size;
-minHeapify(minHeap, 0);
-return temp;
+        struct MinHeapNode* temp = minHeap->array[0];
+        minHeap->array[0] = minHeap->array[minHeap->size - 1];
+        --minHeap->size;
+        minHeapify(minHeap, 0);
+        return temp;
 }
 // A utility function to insert a new node to Min Heap
 void insertMinHeap(struct MinHeap* minHeap, struct MinHeapNode* minHeapNode)
 {
-++minHeap->size;
-int i = minHeap->size - 1;
-while (i && minHeapNode->freq < minHeap->array[(i - 1)/2]->freq)
-{
-minHeap->array[i] = minHeap->array[(i - 1)/2];
-i = (i - 1)/2;
-}
-minHeap->array[i] = minHeapNode;
+        ++minHeap->size;
+        int i = minHeap->size - 1;
+        while (i && minHeapNode->freq < minHeap->array[(i - 1)/2]->freq)
+            {   minHeap->array[i] = minHeap->array[(i - 1)/2];
+                i = (i - 1)/2;
+            }
+        minHeap->array[i] = minHeapNode;
 }
 // A standard funvtion to build min heap
 void buildMinHeap(struct MinHeap* minHeap)
 {
-int n = minHeap->size - 1;
-int i;
-for (i = (n - 1) / 2; i >= 0; --i)
-minHeapify(minHeap, i);
+        int n = minHeap->size - 1;
+        int i;
+        for (i = (n - 1) / 2; i >= 0; --i)
+        minHeapify(minHeap, i);
 }
 // A utility function to print an array of size n
 void printArr(int arr[], int n)
 {
-int i;
-for (i = 0; i < n; ++i)
-printf("%d", arr[i]);
-printf("\n");
+        int i;
+        for (i = 0; i < n; ++i)
+        printf("%d", arr[i]);
+        printf("\n");
 }
 // Utility function to check if this node is leaf
 int isLeaf(struct MinHeapNode* root)
-{
-return !(root->left) && !(root->right) ;
+{       return !(root->left) && !(root->right) ;
 }
 // Creates a min heap of capacity equal to size and inserts all character of 
 // data[] in min heap. Initially size of min heap is equal to capacity
