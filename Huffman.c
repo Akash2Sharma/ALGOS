@@ -42,9 +42,9 @@ struct MinHeap* createMinHeap(unsigned capacity)
 // A utility function to swap two min heap nodes
 void swapMinHeapNode(struct MinHeapNode** a, struct MinHeapNode** b)
 {
-struct MinHeapNode* t = *a;
-*a = *b;
-*b = t;
+        struct MinHeapNode* t = *a;
+        *a = *b;
+        *b = t;
 }
 // The standard minHeapify function.
 void minHeapify(struct MinHeap* minHeap, int idx)
@@ -146,42 +146,42 @@ struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
 // store codes
 void printCodes(struct MinHeapNode* root, int arr[], int top)
 {
-// Assign 0 to left edge and recur
-if (root->left)
-{
-arr[top] = 0;
-printCodes(root->left, arr, top + 1);
-}
-// Assign 1 to right edge and recur
-if (root->right)
-{
-arr[top] = 1;
-printCodes(root->right, arr, top + 1);
-}
-// If this is a leaf node, then it contains one of the input
-// characters, print the character and its code from arr[]
-if (isLeaf(root))
-{
-printf("%c: ", root->data);
-printArr(arr, top);
-}
+        // Assign 0 to left edge and recur
+        if (root->left)
+            {
+                arr[top] = 0;
+                printCodes(root->left, arr, top + 1);
+            }
+        // Assign 1 to right edge and recur
+        if (root->right)
+            {
+                arr[top] = 1;
+                printCodes(root->right, arr, top + 1);
+            }
+        // If this is a leaf node, then it contains one of the input
+        // characters, print the character and its code from arr[]
+        if (isLeaf(root))
+            {
+                printf("%c: ", root->data);
+                printArr(arr, top);
+            }
 }
 // The main function that builds a Huffman Tree and print codes by traversing
 // the built Huffman Tree
 void HuffmanCodes(char data[], int freq[], int size)
 {
-//  Construct Huffman Tree
-struct MinHeapNode* root = buildHuffmanTree(data, freq, size);
-// Print Huffman codes using the Huffman tree built above
-int arr[MAX_TREE_HT], top = 0;
-printCodes(root, arr, top);
+        //  Construct Huffman Tree
+        struct MinHeapNode* root = buildHuffmanTree(data, freq, size);
+        // Print Huffman codes using the Huffman tree built above
+        int arr[MAX_TREE_HT], top = 0;
+        printCodes(root, arr, top);
 }
 // Driver program to test above functions
 int main()
 {
-char arr[] = {'a', 'b', 'c', 'd', 'e', 'f'};
-int freq[] = {5, 9, 12, 13, 16, 45};
-int size = sizeof(arr)/sizeof(arr[0]);
-HuffmanCodes(arr, freq, size);
-return 0;
+    char arr[] = {'a', 'b', 'c', 'd', 'e', 'f'};
+    int freq[] = {5, 9, 12, 13, 16, 45};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    HuffmanCodes(arr, freq, size);
+    return 0;
 }
