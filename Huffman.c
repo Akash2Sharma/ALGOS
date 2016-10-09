@@ -110,37 +110,37 @@ int isLeaf(struct MinHeapNode* root)
 // data[] in min heap. Initially size of min heap is equal to capacity
 struct MinHeap* createAndBuildMinHeap(char data[], int freq[], int size)
 {
-struct MinHeap* minHeap = createMinHeap(size);
-for (int i = 0; i < size; ++i)
-minHeap->array[i] = newNode(data[i], freq[i]);
-minHeap->size = size;
-buildMinHeap(minHeap);
-return minHeap;
+        struct MinHeap* minHeap = createMinHeap(size);
+        for (int i = 0; i < size; ++i)
+        minHeap->array[i] = newNode(data[i], freq[i]);
+        minHeap->size = size;
+        buildMinHeap(minHeap);
+        return minHeap;
 }
 // The main function that builds Huffman tree
 struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
 {
-struct MinHeapNode *left, *right, *top;
-// Step 1: Create a min heap of capacity equal to size.  Initially, there are
-// modes equal to size.
-struct MinHeap* minHeap = createAndBuildMinHeap(data, freq, size);
-// Iterate while size of heap doesn't become 1
-while (!isSizeOne(minHeap))
-{
-// Step 2: Extract the two minimum freq items from min heap
-left = extractMin(minHeap);
-right = extractMin(minHeap);
-// Step 3:  Create a new internal node with frequency equal to the
-// sum of the two nodes frequencies. Make the two extracted node as
-// left and right children of this new node. Add this node to the min heap
-// '$' is a special value for internal nodes, not used
-top = newNode('$', left->freq + right->freq);
-top->left = left;
-top->right = right;
-insertMinHeap(minHeap, top);
-}
-// Step 4: The remaining node is the root node and the tree is complete.
-return extractMin(minHeap);
+        struct MinHeapNode *left, *right, *top;
+        // Step 1: Create a min heap of capacity equal to size.  Initially, there are
+        // modes equal to size.
+        struct MinHeap* minHeap = createAndBuildMinHeap(data, freq, size);
+        // Iterate while size of heap doesn't become 1
+        while (!isSizeOne(minHeap))
+            {
+                // Step 2: Extract the two minimum freq items from min heap
+                left = extractMin(minHeap);
+                right = extractMin(minHeap);
+                // Step 3:  Create a new internal node with frequency equal to the
+                // sum of the two nodes frequencies. Make the two extracted node as
+                // left and right children of this new node. Add this node to the min heap
+                // '$' is a special value for internal nodes, not used
+                top = newNode('$', left->freq + right->freq);
+                top->left = left;
+                top->right = right;
+                insertMinHeap(minHeap, top);
+            }
+        // Step 4: The remaining node is the root node and the tree is complete.
+        return extractMin(minHeap);
 }
 // Prints huffman codes from the root of Huffman Tree.  It uses arr[] to
 // store codes
