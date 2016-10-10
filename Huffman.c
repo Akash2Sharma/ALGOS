@@ -64,8 +64,7 @@ void minHeapify(struct MinHeap* minHeap, int idx)
 }
 // A utility function to check if size of heap is 1 or not
 int isSizeOne(struct MinHeap* minHeap)
-    {   return (minHeap->size == 1);
-    }
+    {   return (minHeap->size == 1);  }
 // A standard function to extract minimum value node from heap
 struct MinHeapNode* extractMin(struct MinHeap* minHeap)
 {
