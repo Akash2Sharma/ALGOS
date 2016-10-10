@@ -141,8 +141,7 @@ struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
         // Step 4: The remaining node is the root node and the tree is complete.
         return extractMin(minHeap);
 }
-// Prints huffman codes from the root of Huffman Tree.  It uses arr[] to
-// store codes
+// Prints huffman codes from the root of Huffman Tree.  It uses arr[] to store codes
 
 // A  C program for Huffman Coding
 void printCodes(struct MinHeapNode* root, int arr[], int top)
