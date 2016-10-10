@@ -143,6 +143,8 @@ struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
 }
 // Prints huffman codes from the root of Huffman Tree.  It uses arr[] to
 // store codes
+
+// A  C program for Huffman Coding
 void printCodes(struct MinHeapNode* root, int arr[], int top)
 {
         // Assign 0 to left edge and recur
