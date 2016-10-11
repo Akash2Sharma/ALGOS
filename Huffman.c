@@ -185,4 +185,4 @@ int main()
     HuffmanCodes(arr, freq, size);
     return 0;
 }
-// A  C program for Huffman
+// A  C program for
