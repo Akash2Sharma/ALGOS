@@ -10,7 +10,7 @@ struct MinHeapNode
     unsigned freq;  // Frequency of the character
     struct MinHeapNode *left, *right; // Left and right child of this node
 };
-// A Min Heap:  Collection of min heap (or Hufmman tree) nodes
+// A Min Heap: Collection of min heap (or Hufmman tree) nodes
 struct MinHeap
 {
       unsigned size;    // Current size of min heap
