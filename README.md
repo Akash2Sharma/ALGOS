@@ -1,3 +1,3 @@
 # ALGOS
 
-It a Repository in which i'll be doing some important Algorithms .
+In This Repository  i'll do some important Algorithms .
