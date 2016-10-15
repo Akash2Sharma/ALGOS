@@ -19,7 +19,7 @@ struct MinHeap
 };
 // A utility function allocate a new min heap node with given character
 // and frequency of the character
-struct MinHeapNode* newNode(char data, unsigned freq)
+struct MinHeapNode* newNode(char data,unsigned freq)
 {
         struct MinHeapNode* temp =
         (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));
