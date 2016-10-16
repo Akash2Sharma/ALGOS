@@ -1,3 +1,3 @@
 # ALGOS
 
-In This Repository  i'll do some important Algorithms .
+In This Repository  i will do some important Algorithms so that anyone can have them ,inform or  code.
