@@ -186,3 +186,23 @@ int main()
     return 0;
 }
 
+/*
+#include <iostream>
+using namespace std;
+int main()
+{   int t;
+    scanf("%d", &t);
+    for (int k = 0; k < t; k++)
+        {   int n;
+            scanf("%d", &n);
+            int c = 0;
+            while (n >= 5)
+                {
+                    n /= 5;
+                    c += n;
+                }
+            printf("%d\n", c);
+        }
+    return 0;
+}*/
+
