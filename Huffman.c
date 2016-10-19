@@ -200,9 +200,9 @@ int main()
                 {
                     n /= 5;
                     c += n;
-                }
+                }                                          
             printf("%d\n", c);
-        }
+        }     
     return 0;
 }*/
 
