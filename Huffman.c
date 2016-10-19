@@ -186,7 +186,7 @@ int main()
     return 0;
 }
 
-/*
+/************************
 #include <iostream>
 using namespace std;
 int main()
@@ -204,5 +204,6 @@ int main()
             printf("%d\n", c);
         }     
     return 0;
-}*/
+}
+*************************/
 
