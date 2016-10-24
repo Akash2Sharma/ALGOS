@@ -132,7 +132,7 @@ struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
                 // Step 3:  Create a new internal node with frequency equal to the
                 // sum of the two nodes frequencies. Make the two extracted node as
                 // left and right children of this new node. Add this node to the min heap
-                // '$' is a special value for internal nodes, not used
+                // '$' is a special value for internal nodes,not used
                 top = newNode('$', left->freq + right->freq);
                 top->left = left;
                 top->right = right;
