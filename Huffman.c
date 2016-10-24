@@ -28,7 +28,7 @@ struct MinHeapNode* newNode(char data,unsigned freq)
         temp->freq = freq;
         return temp;
 }
-// A utility function to create a min heap of given capacity
+// A utility function to create a min heap of given capacity    
 struct MinHeap* createMinHeap(unsigned capacity)
 {
         struct MinHeap* minHeap =
