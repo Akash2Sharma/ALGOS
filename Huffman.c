@@ -116,7 +116,7 @@ struct MinHeap* createAndBuildMinHeap(char data[], int freq[], int size)
         buildMinHeap(minHeap);
         return minHeap;
 }
-// The main function that builds Huffman tree
+// The main function that builds Huffman tree                                                                   
 struct MinHeapNode* buildHuffmanTree(char data[], int freq[], int size)
 {
         struct MinHeapNode *left, *right, *top;
