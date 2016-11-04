@@ -22,7 +22,7 @@ struct MinHeap
 struct MinHeapNode* newNode(char data,unsigned freq)
 {
         struct MinHeapNode* temp =
-        (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));
+        (struct MinHeapNode*) malloc(sizeof(struct MinHeapNode));.  
         temp->left = temp->right = NULL;
         temp->data = data;
         temp->freq = freq;
