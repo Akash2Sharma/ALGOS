@@ -17,7 +17,7 @@ struct MinHeap
       unsigned capacity;   // capacity of min heap
       struct MinHeapNode **array;  // Attay of minheap node pointers
 };
-// A utility function allocate a new min heap node with given character
+// A utility function allocate a new min heap node with given character.    
 // and frequency of the character
 struct MinHeapNode* newNode(char data,unsigned freq)
 {
