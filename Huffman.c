@@ -1,4 +1,4 @@
-//A  C program for Huffman Coding                                  
+//A C program for Huffman Coding                                  
 #include <stdio.h>
 #include <stdlib.h>
 // This constant can be avoided by explicitly calculating height of Huffman Tree
@@ -62,10 +62,10 @@ void minHeapify(struct MinHeap* minHeap, int idx)
                 minHeapify(minHeap, smallest);
             }
 }
-// A utility function to check if size of heap is 1 or not
+//A utility function to check if size of heap is 1 or not
 int isSizeOne(struct MinHeap* minHeap)
     {   return (minHeap->size == 1);  }
-// A standard function to extract minimum value node from heap
+//A standard function to extract minimum value node from heap
 struct MinHeapNode* extractMin(struct MinHeap* minHeap)
 {
         struct MinHeapNode* temp = minHeap->array[0];
@@ -74,7 +74,7 @@ struct MinHeapNode* extractMin(struct MinHeap* minHeap)
         minHeapify(minHeap, 0);
         return temp;
 }
-// A utility function to insert a new node to Min Heap
+//A utility function to insert a new node to Min Heap
 void insertMinHeap(struct MinHeap* minHeap, struct MinHeapNode* minHeapNode)
 {
         ++minHeap->size;
@@ -93,7 +93,7 @@ void buildMinHeap(struct MinHeap* minHeap)
         for (i = (n - 1) / 2; i >= 0; --i)
         minHeapify(minHeap, i);
 }
-// A utility function to print an array of size n
+//A utility function to print an array of size n
 void printArr(int arr[], int n)
 {
         int i;
