@@ -12,7 +12,7 @@ struct MinHeapNode
 };
 // A Min Heap:Collection of min heap (or Hufmman tree) nodes
 struct MinHeap
-{
+{ 
       unsigned size;    // Current size of min heap. 
       unsigned capacity;   // capacity of min heap
       struct MinHeapNode **array;  // Attay of minheap node pointers
